@@ -18,6 +18,21 @@ public class ComparableTest {
         alphabet.add("e");
 
         ArrayList<String> expected = new ArrayList<>();
+        expected.add("a");
+        expected.add("b");
+        expected.add("c");
+        expected.add("d");
+        expected.add("e");
+        expected.add("f");
+
+        Collections.sort(alphabet);
+
+        Assert.assertEquals(expected, alphabet);
+    }
+
+    @Test
+    public void comparableTest2() {
+        ArrayList<String> alphabet = new ArrayList<>();
         alphabet.add("a");
         alphabet.add("b");
         alphabet.add("c");
@@ -25,11 +40,10 @@ public class ComparableTest {
         alphabet.add("e");
         alphabet.add("f");
 
-       Collections.sort(alphabet);
+        alphabet.clear();
+        alphabet.add("a");
 
-        Assert.assertEquals(expected, alphabet);
-
-
+        Assert.assertEquals(1,alphabet.size());
     }
 
 }
